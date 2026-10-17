@@ -317,14 +317,16 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
+  width: 38px;
   height: 36px;
   background-color: var(--color-forest);
   color: #FAF8F5;
   font-family: var(--font-serif-display);
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   border-radius: 4px;
+  flex-shrink: 0;
 }
 
 .brand-text {

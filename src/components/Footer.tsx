@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
           {/* Brand Info */}
           <div className="footer-col brand-col">
             <div className="footer-wordmark">
-              <span className="brand-monogram">H</span>
+              <span className="brand-monogram">HU</span>
               <span className="footer-brand-name">{PORTFOLIO_CONFIG.brand.name}</span>
             </div>
             <p className="footer-desc">

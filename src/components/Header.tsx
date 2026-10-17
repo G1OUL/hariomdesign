@@ -62,7 +62,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenInquiry }) => {
         <div className="container header-container">
           {/* Brand Wordmark */}
           <a href="#" className="brand-wordmark" aria-label={`${PORTFOLIO_CONFIG.brand.name} Home`}>
-            <span className="brand-monogram">H</span>
+            <span className="brand-monogram">HU</span>
             <div className="brand-text">
               <span className="brand-name">{PORTFOLIO_CONFIG.brand.name}</span>
               <span className="brand-sub">Hospitality Web Designer</span>

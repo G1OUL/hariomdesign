@@ -33,13 +33,11 @@ export const About: React.FC = () => {
               ))}
             </div>
 
-            {/* Editable Profile Note for User */}
+            {/* Direct Studio Focus Callout */}
             <div className="profile-editable-callout" role="note">
-              <span className="callout-pill">Customizable Bio</span>
+              <span className="callout-pill">Direct Collaboration</span>
               <p className="callout-text">
-                This bio text can be customized anytime in{" "}
-                <code>src/config/portfolio.ts</code> to share your personal design journey, regional
-                focus, or preferred hospitality niches.
+                Every project is designed and built personally by Hariom Upadhyay. From initial visual direction to mobile-first coding and domain handover, you work directly with your designer.
               </p>
             </div>
           </div>

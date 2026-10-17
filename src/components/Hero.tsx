@@ -95,14 +95,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenInquiry }) => {
                 Crafted for guest trust & fast mobile inquiries.
               </p>
               <div className="floating-card-stats">
-                <span className="stat-highlight">0% OTA Commission</span>
-                <span className="stat-sub">via direct guest channels</span>
+                <span className="stat-highlight">Direct Guest Inquiries</span>
+                <span className="stat-sub">Frictionless WhatsApp &amp; email channels</span>
               </div>
             </div>
 
             {/* Secondary Accent Detail */}
             <div className="hero-stamp" aria-hidden="true">
-              <span className="stamp-text">EST. 2025 &bull; HOSPITALITY DESIGN</span>
+              <span className="stamp-text">INDEPENDENT HOSPITALITY WEB DESIGN</span>
             </div>
           </div>
         </div>

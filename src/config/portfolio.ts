@@ -1,15 +1,9 @@
 /**
- * PORTFOLIO CONFIGURATION
+ * PORTFOLIO CONFIGURATION — HARIOM UPADHYAY
  * ------------------------------------------------------------------
  * This file centralizes all brand information, contact details, pricing,
- * services, and case studies.
- *
- * TO PERSONALIZE BEFORE LAUNCH:
- * 1. Replace '[YOUR NAME]' with your full name.
- * 2. Replace 'your.email@example.com' with your actual working email.
- * 3. Replace the WhatsApp number with your actual country code + phone number.
- * 4. Update the social links with your actual URLs (or leave blank to hide).
- * 5. Update your GitHub username in the GitHub Pages URL.
+ * services, and case studies for Hariom Upadhyay's independent hospitality
+ * website design studio.
  * ------------------------------------------------------------------
  */
 
@@ -72,34 +66,29 @@ export interface ProcessStep {
 
 export const PORTFOLIO_CONFIG = {
   brand: {
-    name: "[YOUR NAME]",
-    brandTitle: "[YOUR NAME] — Hospitality Web Designer",
-    role: "Independent Web Designer",
+    name: "Hariom Upadhyay",
+    brandTitle: "Hariom Upadhyay — Independent Hospitality Website Designer",
+    role: "Independent Hospitality Website Designer",
     specialization: "Villas, Homestays & Boutique Stays",
-    location: "India",
+    location: "India — Remote",
     tagline: "Digital homes for unforgettable stays.",
     subheadline:
       "I design thoughtful, modern websites for villas, homestays, and boutique hospitality brands.",
     positioning:
       "Thoughtful, premium, mobile-friendly websites that help independent stays take direct inquiries and showcase their unique character.",
-    availability: "Accepting select client projects for 2025/2026",
+    availability: "Accepting select client projects",
     primaryCta: "Let's Discuss Your Website",
     secondaryCta: "Explore My Work",
   },
 
   contact: {
-    // IMPORTANT: Replace with your actual email address before publishing
-    email: "your.email@example.com",
-    // IMPORTANT: Replace with your actual WhatsApp number with country code (e.g. 919876543210)
-    // Set to empty string "" if you do not want WhatsApp displayed
-    whatsappNumber: "+91-XXXXXXXXXX",
-    whatsappCleanNumber: "91XXXXXXXXXX", // Digits only for wa.me link
-    location: "Bengaluru & Pan-India (Remote)",
+    email: "uhariom914@gmail.com",
+    whatsappNumber: "+91 7276516075",
+    whatsappCleanNumber: "917276516075", // Digits only for wa.me link
+    location: "India — Remote",
     socialLinks: {
-      github: "https://github.com/YOUR-GITHUB-USERNAME",
-      linkedin: "https://linkedin.com/in/YOUR-HANDLE",
-      instagram: "https://instagram.com/YOUR-HANDLE",
-      twitter: "https://x.com/YOUR-HANDLE",
+      github: "https://github.com/G1OUL",
+      linkedin: "https://www.linkedin.com/in/hariom-upadhyay-b07848317",
     },
     inquiryNotice:
       "No automated bot replies. I review every hospitality inquiry personally within 24 hours.",
@@ -135,7 +124,7 @@ export const PORTFOLIO_CONFIG = {
       goals: [
         "Convey quiet luxury, misty mountain mornings, and estate-to-table dining.",
         "Solve common guest questions (road conditions, weather, estate walks) before booking.",
-        "Provide an effortless direct WhatsApp and email inquiry channel to bypass high OTA commissions.",
+        "Provide an effortless direct WhatsApp and email inquiry channel to encourage direct bookings alongside third-party platforms.",
       ],
       intendedAudience:
         "Couples, solo writers, and high-income city travelers seeking quietude, privacy, and farm-fresh slow living away from tourist crowds.",
@@ -392,7 +381,7 @@ export const PORTFOLIO_CONFIG = {
       startingPrice: "₹3,000",
       priceNote: "Introductory starting rate",
       description:
-        "Designed to convert social media followers, Airbnb inquiries, and word-of-mouth recommendations into direct, commission-free bookings.",
+        "Designed to turn social media followers, guest inquiries, and word-of-mouth recommendations into direct bookings through WhatsApp and email.",
       isPopular: false,
       deliverables: [
         "Hero section with property character & instant booking CTA",
@@ -488,10 +477,10 @@ export const PORTFOLIO_CONFIG = {
   about: {
     headline: "Thoughtful digital spaces for memorable Indian stays.",
     paragraphs: [
-      "I am an independent freelance web designer based in India, dedicated to helping villa owners, heritage homestays, and boutique hospitality properties showcase their hospitality online.",
-      "Most independent properties rely heavily on OTA platforms, losing 15% to 20% on every reservation. Others have outdated websites that load slowly on mobile phones or look like generic corporate templates.",
-      "My approach is different: I combine editorial typography, warm natural color palettes, and frictionless direct-booking channels (like instant WhatsApp inquiries) so your website reflects the genuine warmth of your property.",
-      "Working with an independent designer means you get direct, personal collaboration without the overhead, jargon, or slow turnaround of traditional agencies.",
+      "I am Hariom Upadhyay, an independent website designer based in India, dedicated to helping villa owners, heritage homestays, and boutique hospitality properties showcase their hospitality online.",
+      "While online travel agencies (OTAs) provide initial reach, relying solely on them can mean losing 15% to 20% on reservations. Having a dedicated direct-booking website establishes your independent brand and gives returning guests a frictionless way to inquire directly.",
+      "My approach pairs editorial typography and warm natural palettes with simple direct-inquiry channels—such as instant WhatsApp and email inquiries—giving guests an effortless way to connect directly with you.",
+      "Working directly with me means personal collaboration without agency overhead, unnecessary jargon, or lengthy turnarounds.",
     ],
     principles: [
       {
@@ -507,7 +496,7 @@ export const PORTFOLIO_CONFIG = {
       {
         title: "Direct Inquiries Over OTAs",
         description:
-          "Prominent WhatsApp and direct email links empower you to keep more of your hard-earned revenue.",
+          "Prominent WhatsApp and direct email channels empower you to build direct guest relationships and reduce reliance on third-party channels.",
       },
       {
         title: "Editorial Hospitality Aesthetic",

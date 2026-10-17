@@ -77,23 +77,17 @@ npm run lint
 
 ---
 
-## ✏️ Customization & Replacing Placeholders
+## 👤 Professional Details
 
-All personal and brand details are centralized in **`src/config/portfolio.ts`**. Before launching publicly, customize the following fields:
+The portfolio is configured with Hariom Upadhyay's professional details in **`src/config/portfolio.ts`**:
 
-1. **Your Name & Brand**:
-   - `brand.name`: Replace `"[YOUR NAME]"` with your actual name.
-   - `brand.brandTitle`: Replace `"[YOUR NAME] — Hospitality Web Designer"`.
-2. **Contact Email**:
-   - `contact.email`: Replace `"your.email@example.com"` with your actual working email.
-3. **WhatsApp Number**:
-   - `contact.whatsappNumber`: Formatted for display (e.g., `"+91-9876543210"`).
-   - `contact.whatsappCleanNumber`: Digits only including country code (e.g., `"919876543210"`).
-   - *Note: If you do not wish to display WhatsApp, set `whatsappNumber` to `""`.*
-4. **Social Links**:
-   - Update `contact.socialLinks` with your actual LinkedIn, GitHub, or Instagram profile URLs (or leave blank `""` to hide them).
-5. **Pricing & Services**:
-   - Edit starting rates in `services` (currently set to introductory examples: Starter Landing Page from ₹3,000, Multi-Section Website from ₹5,000).
+- **Name**: Hariom Upadhyay
+- **Title**: Independent Hospitality Website Designer
+- **Email**: `uhariom914@gmail.com`
+- **Phone / WhatsApp**: `+91 7276516075` (`https://wa.me/917276516075`)
+- **GitHub**: [https://github.com/G1OUL](https://github.com/G1OUL)
+- **LinkedIn**: [https://www.linkedin.com/in/hariom-upadhyay-b07848317](https://www.linkedin.com/in/hariom-upadhyay-b07848317)
+- **Live Website**: [https://g1oul.github.io/hariomdesign/](https://g1oul.github.io/hariomdesign/)
 
 ---
 

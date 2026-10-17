@@ -274,7 +274,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
                       <span className="dot green" />
                     </div>
                     <div className="browser-address">
-                      <span>https://stays.{project.slug}.example.com</span>
+                      <span>https://www.{project.slug}.in</span>
                     </div>
                   </div>
 
@@ -365,7 +365,7 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
           <div className="modal-footer-info">
             <span className="footer-label">Want a similar website for your stay?</span>
             <span className="footer-sub">
-              Delivered in 3–7 days with zero commissions on bookings.
+              Delivered in 3–7 days with direct guest inquiry channels for your property.
             </span>
           </div>
 

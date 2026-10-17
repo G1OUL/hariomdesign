@@ -34,32 +34,25 @@ export const Contact: React.FC<ContactProps> = ({ preselectedService }) => {
   const inquiryMessage = `Hello ${PORTFOLIO_CONFIG.brand.name},
 
 I'm inquiring about a website for my hospitality property:
-• Property Name: ${propertyName || "[My Property Name]"}
+• Property Name: ${propertyName.trim() ? propertyName.trim() : "[Not specified]"}
 • Property Type: ${propertyType}
-• Location: ${propertyLocation || "[Location / Region]"}
+• Location: ${propertyLocation.trim() ? propertyLocation.trim() : "[Not specified]"}
 • Desired Service: ${selectedService}
 • Target Timeline: ${timeline}
-${notes ? `• Additional Notes: ${notes}` : ""}
+${notes.trim() ? `• Additional Details: ${notes.trim()}\n` : ""}
+Looking forward to discussing your thoughts and availability.`;
 
-Looking forward to hearing your thoughts and availability.`;
-
-  const emailSubject = `Website Inquiry: ${propertyName || propertyType} (${selectedService})`;
+  const emailSubject = `Website Inquiry: ${propertyName.trim() || propertyType} — ${selectedService}`;
 
   // Generate mailto link
   const mailtoLink = `mailto:${PORTFOLIO_CONFIG.contact.email}?subject=${encodeURIComponent(
     emailSubject
   )}&body=${encodeURIComponent(inquiryMessage)}`;
 
-  // Generate WhatsApp link if configured
-  const hasValidWhatsApp =
-    PORTFOLIO_CONFIG.contact.whatsappCleanNumber &&
-    !PORTFOLIO_CONFIG.contact.whatsappCleanNumber.includes("X");
-
-  const whatsappUrl = hasValidWhatsApp
-    ? `https://wa.me/${PORTFOLIO_CONFIG.contact.whatsappCleanNumber}?text=${encodeURIComponent(
-        inquiryMessage
-      )}`
-    : `https://wa.me/?text=${encodeURIComponent(inquiryMessage)}`;
+  // Generate direct WhatsApp link
+  const whatsappUrl = `https://wa.me/${PORTFOLIO_CONFIG.contact.whatsappCleanNumber}?text=${encodeURIComponent(
+    inquiryMessage
+  )}`;
 
   const handleCopyMessage = () => {
     navigator.clipboard.writeText(inquiryMessage);
@@ -306,13 +299,13 @@ Looking forward to hearing your thoughts and availability.`;
                 </div>
               </div>
 
-              {/* Professional Social Links (if configured) */}
+              {/* Professional Profiles */}
               <div className="social-links-section">
-                <span className="social-section-label">Professional Links</span>
+                <span className="social-section-label">Professional Profiles</span>
                 <div className="social-links-row">
                   {Object.entries(PORTFOLIO_CONFIG.contact.socialLinks).map(([network, url]) => {
                     if (!url) return null;
-                    const isPlaceholder = url.includes("YOUR-");
+                    const displayName = network === "github" ? "GitHub" : network === "linkedin" ? "LinkedIn" : network;
                     return (
                       <a
                         key={network}
@@ -320,10 +313,11 @@ Looking forward to hearing your thoughts and availability.`;
                         target="_blank"
                         rel="noopener noreferrer"
                         className="social-pill"
-                        title={isPlaceholder ? `Placeholder: edit in src/config/portfolio.ts` : network}
+                        aria-label={`Visit ${PORTFOLIO_CONFIG.brand.name} on ${displayName}`}
+                        title={`${displayName} Profile`}
                       >
-                        <span className="social-name">{network}</span>
-                        <ArrowUpRight size={13} />
+                        <span className="social-name">{displayName}</span>
+                        <ArrowUpRight size={13} aria-hidden="true" />
                       </a>
                     );
                   })}
@@ -331,16 +325,14 @@ Looking forward to hearing your thoughts and availability.`;
               </div>
             </div>
 
-            {/* Launch Checklist Helper Box */}
+            {/* Direct Client Guarantee */}
             <div className="contact-helper-box" role="note">
               <div className="helper-box-header">
                 <HelpCircle size={17} />
-                <h4>Configuration Notice Before Launch</h4>
+                <h4>Direct Collaboration Guarantee</h4>
               </div>
               <p>
-                To receive client inquiries at your own address, replace{" "}
-                <code>your.email@example.com</code> and the WhatsApp number in{" "}
-                <code>src/config/portfolio.ts</code> before deploying.
+                All inquiries reach Hariom Upadhyay directly. You receive a personalized reply within 24 hours with transparent pricing and clear deliverables—no agencies, automated bots, or hidden fees.
               </p>
             </div>
           </div>
