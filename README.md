@@ -1,0 +1,171 @@
+# Premium Freelance Hospitality Web Design Portfolio
+
+A complete, production-ready personal portfolio website for an independent freelance website designer specializing in vacation rentals, boutique villas, heritage homestays, holiday cottages, and hospitality stays in India.
+
+Built with **React 19**, **TypeScript**, **Vite**, and **Vanilla CSS** following a warm, editorial hospitality aesthetic.
+
+---
+
+## 🌟 Creative Direction & Aesthetic
+
+- **Color Palette**: Warm ivory (`#FAF8F5`) and soft sand (`#EDE6DC`) backgrounds, deep forest green (`#1A2F23`) and charcoal typography, muted olive accents (`#546650`), and restrained terracotta details (`#B85D3B`).
+- **Typography**: Editorial display serif (*Playfair Display* and *Cormorant Garamond*) paired with a clean modern sans-serif (*Plus Jakarta Sans*).
+- **Hospitality Atmosphere**: Generous whitespace, refined property photography compositions, subtle micro-interactions, responsive without horizontal scroll, and strict adherence to `prefers-reduced-motion`.
+- **Honest Positioning**: No invented client numbers, fake awards, or deceptive claims. All three featured projects are clearly badged as **"Concept Project"** case studies to showcase your design thinking and direct-booking conversion strategy with complete integrity.
+
+---
+
+## 📁 Project Structure
+
+```text
+├── .github/
+│   └── workflows/
+│       └── deploy.yml          # Automated GitHub Pages CI/CD workflow
+├── public/                     # Static assets & public files
+├── src/
+│   ├── components/
+│   │   ├── Header.tsx          # Sticky navigation with accessible mobile drawer & CTA
+│   │   ├── Hero.tsx            # Editorial 2-column hero with property image & badges
+│   │   ├── SelectedWork.tsx    # 3 concept stays with interactive case study triggers
+│   │   ├── CaseStudyModal.tsx  # In-depth case study modal with interactive device simulator
+│   │   ├── Services.tsx        # 3 service packages (from ₹3,000 / ₹5,000) & disclaimer
+│   │   ├── Process.tsx         # 4-step workflow tailored for non-technical stay owners
+│   │   ├── About.tsx           # Authentic studio narrative & hospitality principles
+│   │   ├── Contact.tsx         # Interactive inquiry builder (mailto & WhatsApp chat)
+│   │   └── Footer.tsx          # Brand summary, navigation anchors & sitemap
+│   ├── config/
+│   │   └── portfolio.ts        # Centralized brand, pricing, contact & project data
+│   ├── App.tsx                 # Main application layout & modal state management
+│   ├── index.css               # Editorial design system tokens & responsive styles
+│   └── main.tsx                # Application entry point
+├── index.html                  # SEO metadata, Open Graph tags, Google Fonts, SVG favicon
+├── package.json
+├── tsconfig.json
+├── vite.config.ts              # Vite configured for root base path ('/')
+└── README.md                   # Setup, customization & deployment guide
+```
+
+---
+
+## 🛠️ Local Development
+
+### 1. Prerequisites
+Ensure you have **Node.js** (v18 or newer) and **npm** installed.
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. Start Development Server
+```bash
+npm run dev
+```
+Open your browser at the local URL displayed (typically `http://localhost:5173`).
+
+### 4. Build for Production & Lint Check
+```bash
+# Type-check and produce production bundle in /dist
+npm run build
+
+# Preview production build locally
+npm run preview
+
+# Run linting
+npm run lint
+```
+
+---
+
+## ✏️ Customization & Replacing Placeholders
+
+All personal and brand details are centralized in **`src/config/portfolio.ts`**. Before launching publicly, customize the following fields:
+
+1. **Your Name & Brand**:
+   - `brand.name`: Replace `"[YOUR NAME]"` with your actual name.
+   - `brand.brandTitle`: Replace `"[YOUR NAME] — Hospitality Web Designer"`.
+2. **Contact Email**:
+   - `contact.email`: Replace `"your.email@example.com"` with your actual working email.
+3. **WhatsApp Number**:
+   - `contact.whatsappNumber`: Formatted for display (e.g., `"+91-9876543210"`).
+   - `contact.whatsappCleanNumber`: Digits only including country code (e.g., `"919876543210"`).
+   - *Note: If you do not wish to display WhatsApp, set `whatsappNumber` to `""`.*
+4. **Social Links**:
+   - Update `contact.socialLinks` with your actual LinkedIn, GitHub, or Instagram profile URLs (or leave blank `""` to hide them).
+5. **Pricing & Services**:
+   - Edit starting rates in `services` (currently set to introductory examples: Starter Landing Page from ₹3,000, Multi-Section Website from ₹5,000).
+
+---
+
+## 🚀 Publishing to GitHub Pages (Free Hosting)
+
+This project is pre-configured to deploy automatically to **GitHub Pages** using GitHub Actions at:
+```text
+https://YOUR-GITHUB-USERNAME.github.io/
+```
+
+### Step 1: Create the GitHub Repository
+1. Log in to [GitHub](https://github.com/).
+2. Click **New Repository**.
+3. Name the repository exactly:
+   ```text
+   YOUR-GITHUB-USERNAME.github.io
+   ```
+   *(Replace `YOUR-GITHUB-USERNAME` with your actual GitHub username).*
+4. Make sure the repository visibility is set to **Public**.
+5. Do not initialize with a README, .gitignore, or license (these already exist locally).
+
+### Step 2: Initialize Git & Push Local Files
+From the project root directory in your terminal:
+
+```bash
+# Initialize git if not already initialized
+git init
+
+# Add all files to staging
+git add .
+
+# Commit your code
+git commit -m "Initial commit: Premium hospitality web design portfolio"
+
+# Set branch to main
+git branch -M main
+
+# Link your remote repository (replace with your GitHub username)
+git remote add origin https://github.com/YOUR-GITHUB-USERNAME/YOUR-GITHUB-USERNAME.github.io.git
+
+# Push to GitHub
+git push -u origin main
+```
+
+### Step 3: Configure GitHub Pages Publishing Source
+1. Open your repository on GitHub.
+2. Go to **Settings** → **Pages** (in the left sidebar).
+3. Under **Build and deployment** → **Source**, select:
+   ```text
+   GitHub Actions
+   ```
+4. The workflow in `.github/workflows/deploy.yml` will automatically trigger, build the React project, and deploy the `/dist` bundle to your live URL!
+5. After 1–2 minutes, visit your live website at:
+   ```text
+   https://YOUR-GITHUB-USERNAME.github.io/
+   ```
+
+### Step 4: Making Updates in the Future
+Whenever you update code, add new case studies, or modify pricing in `src/config/portfolio.ts`, simply run:
+```bash
+git add .
+git commit -m "Update portfolio content"
+git push origin main
+```
+GitHub Actions will automatically rebuild and redeploy your website within minutes.
+
+---
+
+## 📋 Quality Assurance & Accessibility
+
+- **Keyboard Navigation**: Full tab navigation with visible focus outlines and a "Skip to main content" link.
+- **Escape & Focus Trap**: The mobile drawer and case study dialog can be closed with the <kbd>Escape</kbd> key or outside click.
+- **Semantic HTML**: Proper `<header>`, `<main>`, `<section>`, `<article>`, `<dialog>`, and `<footer>` landmarks with unique IDs.
+- **Responsive Layout**: Fluid CSS grid and flexbox tested across 320px–375px (small smartphones), 768px (tablets), and 1200px+ (desktop displays) with zero horizontal overflow.
+- **Motion Accessibility**: Full support for `prefers-reduced-motion` media query.
