@@ -41,7 +41,7 @@ Built with **React 19**, **TypeScript**, **Vite**, and **Vanilla CSS** following
 ├── index.html                  # SEO metadata, Open Graph tags, Google Fonts, SVG favicon
 ├── package.json
 ├── tsconfig.json
-├── vite.config.ts              # Vite configured for root base path ('/')
+├── vite.config.ts              # Vite configured for project base path ('/hariomdesign/')
 └── README.md                   # Setup, customization & deployment guide
 ```
 
@@ -99,56 +99,39 @@ All personal and brand details are centralized in **`src/config/portfolio.ts`**.
 
 ## 🚀 Publishing to GitHub Pages (Free Hosting)
 
-This project is pre-configured to deploy automatically to **GitHub Pages** using GitHub Actions at:
+This project is pre-configured to deploy automatically to **GitHub Pages** as a project site using GitHub Actions at:
 ```text
-https://YOUR-GITHUB-USERNAME.github.io/
+https://g1oul.github.io/hariomdesign/
 ```
 
-### Step 1: Create the GitHub Repository
-1. Log in to [GitHub](https://github.com/).
-2. Click **New Repository**.
-3. Name the repository exactly:
-   ```text
-   YOUR-GITHUB-USERNAME.github.io
-   ```
-   *(Replace `YOUR-GITHUB-USERNAME` with your actual GitHub username).*
-4. Make sure the repository visibility is set to **Public**.
-5. Do not initialize with a README, .gitignore, or license (these already exist locally).
+### Step 1: Remote Repository
+The repository is hosted at:
+```text
+https://github.com/G1OUL/hariomdesign
+```
 
-### Step 2: Initialize Git & Push Local Files
+### Step 2: Push Local Files
 From the project root directory in your terminal:
 
 ```bash
-# Initialize git if not already initialized
-git init
+# Link remote repository (if not already linked)
+git remote add origin https://github.com/G1OUL/hariomdesign.git
 
-# Add all files to staging
-git add .
-
-# Commit your code
-git commit -m "Initial commit: Premium hospitality web design portfolio"
-
-# Set branch to main
-git branch -M main
-
-# Link your remote repository (replace with your GitHub username)
-git remote add origin https://github.com/YOUR-GITHUB-USERNAME/YOUR-GITHUB-USERNAME.github.io.git
-
-# Push to GitHub
+# Push main branch to GitHub
 git push -u origin main
 ```
 
 ### Step 3: Configure GitHub Pages Publishing Source
-1. Open your repository on GitHub.
+1. Open your repository on GitHub: `https://github.com/G1OUL/hariomdesign`
 2. Go to **Settings** → **Pages** (in the left sidebar).
 3. Under **Build and deployment** → **Source**, select:
    ```text
    GitHub Actions
    ```
 4. The workflow in `.github/workflows/deploy.yml` will automatically trigger, build the React project, and deploy the `/dist` bundle to your live URL!
-5. After 1–2 minutes, visit your live website at:
+5. Once the GitHub Actions workflow finishes, visit your live website at:
    ```text
-   https://YOUR-GITHUB-USERNAME.github.io/
+   https://g1oul.github.io/hariomdesign/
    ```
 
 ### Step 4: Making Updates in the Future
